@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+include FileUtils # rubocop:disable Style/MixinUsage
+
+GEM_ROOT = File.expand_path('..', __dir__)
+
+def system(*args)
+  puts "$ #{args.size == 1 ? args.first : args.shelljoin}"
+  super
+end
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+cd GEM_ROOT
+
+puts "\n== Installing Ruby dependencies =="
+system! %{gem install bundler --conservative}
+system! %{bundle check || bundle install}

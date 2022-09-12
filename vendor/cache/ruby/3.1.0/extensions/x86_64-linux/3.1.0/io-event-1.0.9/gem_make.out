@@ -1,0 +1,35 @@
+current directory: /home/dave/rails/Projects/solidus_ecommerce/vendor/cache/ruby/3.1.0/gems/io-event-1.0.9/ext
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20220912-715055-67lrn8.rb extconf.rb
+checking for rb_ext_ractor_safe()... yes
+checking for &rb_fiber_transfer()... yes
+checking for -luring... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for sys/eventfd.h... yes
+checking for rb_io_descriptor()... yes
+checking for &rb_process_status_wait()... no
+checking for rb_fiber_current()... yes
+checking for &rb_fiber_raise()... yes
+checking for ruby/io/buffer.h... yes
+creating extconf.h
+creating Makefile
+
+current directory: /home/dave/rails/Projects/solidus_ecommerce/vendor/cache/ruby/3.1.0/gems/io-event-1.0.9/ext
+make DESTDIR\= clean
+rm -f 
+rm -fr IO_Event.so false *.o  *.bak mkmf.log .*.time
+
+current directory: /home/dave/rails/Projects/solidus_ecommerce/vendor/cache/ruby/3.1.0/gems/io-event-1.0.9/ext
+make DESTDIR\=
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -Wall -std=c99 -m64 -o event.o -c ./io/event/event.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -Wall -std=c99 -m64 -o selector.o -c ./io/event/selector/selector.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -Wall -std=c99 -m64 -o epoll.o -c ./io/event/selector/epoll.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -Wall -std=c99 -m64 -o interrupt.o -c ./io/event/interrupt.c
+rm -f IO_Event.so
+gcc -shared -o IO_Event.so event.o selector.o epoll.o interrupt.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1   -m64  -lruby  -lm  -lc
+
+current directory: /home/dave/rails/Projects/solidus_ecommerce/vendor/cache/ruby/3.1.0/gems/io-event-1.0.9/ext
+make DESTDIR\= install
+/usr/bin/mkdir -p . ./.gem.20220912-715055-ahj5m3
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 IO_Event.so ./.gem.20220912-715055-ahj5m3

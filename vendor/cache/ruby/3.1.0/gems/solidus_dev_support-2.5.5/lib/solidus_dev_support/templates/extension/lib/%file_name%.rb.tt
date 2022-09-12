@@ -1,0 +1,5 @@
+# frozen_string_literal: true
+
+require '<%=file_name%>/configuration'
+require '<%=file_name%>/version'
+require '<%=file_name%>/engine'
